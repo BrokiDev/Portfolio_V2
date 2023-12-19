@@ -84,7 +84,7 @@ export default function Home({
         <div className="border border-black p-24">
           <img
             className="w-full h-full"
-            src="./src/assets/image_me.jpg"
+            src="/image_me.jpg"
             alt="IMG Background"
           />
         </div>
@@ -116,7 +116,7 @@ export default function Home({
 
             <a
               target="_blank"
-              href="./src/assets/CVBryantEnglish.pdf"
+              href="/CVBryantEnglish.pdf"
               className="flex items-center justify-center mt-6 border bg-black  mx-auto    dark:text-white dark:bg-black dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white py-2 px-4 rounded-full"
             >
               {text ? "Download CV" : "Descargar Curriculum"}
@@ -133,30 +133,30 @@ export default function Home({
       <div className="flex border border-black  py-10 px-4">
         <div className="grid grid-cols-5 gap-4">
           <div className="border border-black p-4">
-            <img src="./public/icon_HTML.svg" alt="" />
+            <img src="/icon_HTML.svg" alt="" />
           </div>
           <div className="border border-black p-4">
-            <img src="./public/icon_CSS.svg" alt="" />
+            <img src="/icon_CSS.svg" alt="" />
           </div>
           <div className="border border-black p-4">
-            <img src="./public/icon_JS.svg" alt="" />
+            <img src="/icon_JS.svg" alt="" />
           </div>
           <div className="border border-black p-4">
-            <img src="./public/icon_TS.svg" alt="" />
+            <img src="/icon_TS.svg" alt="" />
           </div>
           <div className="border border-black p-4">
-            <img src="./public/icon_react.svg" alt="" />
+            <img src="/icon_react.svg" alt="" />
           </div>
           <div className="border border-black p-4">
-            <img src="./public/icon_nodeJS.svg" alt="" />
-          </div>
-
-          <div className="border border-black p-4">
-            <img src="./public/icon_mongoDB.svg" alt="" />
+            <img src="/icon_nodeJS.svg" alt="" />
           </div>
 
           <div className="border border-black p-4">
-            <img src="./public/icon_sql.svg" alt="" />
+            <img src="/icon_mongoDB.svg" alt="" />
+          </div>
+
+          <div className="border border-black p-4">
+            <img src="/icon_sql.svg" alt="" />
           </div>
         </div>
       </div>
