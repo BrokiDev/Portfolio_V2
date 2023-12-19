@@ -6,6 +6,7 @@ export default function Header({
   boxSvgTextLogo,
   boxSvgTextContact,
   boxSvgTextProject,
+  handleOpenModal,
 }: HeaderProps) {
   return (
     <div>
@@ -13,12 +14,12 @@ export default function Header({
         <Link to={"/"}>
           <BoxSvgComponent width={190} height={54} text={boxSvgTextLogo} />
         </Link>
-        <Link to={"/header"}>
+        <button onClick={handleOpenModal}>
           <BoxSvgComponent width={190} height={54} text={boxSvgTextProject} />
-        </Link>
-        <Link to={"/contact"}>
+        </button>
+        <button onClick={handleOpenModal}>
           <BoxSvgComponent width={190} height={54} text={boxSvgTextContact} />
-        </Link>
+        </button>
         <div>
           <label className="relative inline-flex items-center cursor-pointer">
             <input

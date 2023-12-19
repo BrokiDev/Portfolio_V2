@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../Header/Header";
+import Modal from "../Modal/Modal";
 
 export default function Home({
   handleDarkMode,
@@ -7,15 +8,74 @@ export default function Home({
   handleDarkMode: () => void;
 }) {
   const [text, setText] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleChangeText = () => {
     setText((text) => !text);
   };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
   return (
-    <div>
+    <>
+      <Modal
+        content={
+          text ? (
+            <div>Contact Us</div>
+          ) : (
+            <div className="w-96 h-96 flex flex-col items-center">
+              <div>Contacto</div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+
+              <div className=" flex flex-col items-center">
+                <div>Contacto</div>
+              </div>
+            </div>
+          )
+        }
+        isOpen={modalOpen}
+        toogleClose={handleCloseModal}
+      />
       <Header
         handleChangeText={handleChangeText}
         handleDarkMode={handleDarkMode}
+        handleOpenModal={handleOpenModal}
         boxSvgTextLogo={"Logo"}
         boxSvgTextProject={text ? "Projects" : "Proyectos"}
         boxSvgTextContact={text ? "Contact" : "Contacto"}
@@ -70,7 +130,7 @@ export default function Home({
       ) : (
         <h1 className="dark:text-white">Tecnologias</h1>
       )}
-      <div className="flex border border-black m-3 py-10 px-4">
+      <div className="flex border border-black  py-10 px-4">
         <div className="grid grid-cols-5 gap-4">
           <div className="border border-black p-4">
             <img src="./public/icon_HTML.svg" alt="" />
@@ -100,6 +160,6 @@ export default function Home({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
