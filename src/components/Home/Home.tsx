@@ -80,7 +80,7 @@ export default function Home({
               so. I have worked with technologies like HTML, CSS, SASS,
               JAVASCRIPT, PHP, PYTHON. Some of them are not my forte but the
               experience or the project requires them I can further strengthen
-              my knowledge
+              my knowledge.
             </h1>
           ) : (
             <h1 className="dark:text-white text-lg sm:text-xl">
@@ -91,16 +91,26 @@ export default function Home({
               trabajado con tecnologías como HTML, CSS, SASS, JAVASCRIPT, PHP,
               PYTHON. Algunos de ellos no son mi fuerte pero sí los experiencia
               o el proyecto los requiere puedo fortalecer aún más mi
-              conocimiento
+              conocimiento.
             </h1>
           )}
-          <a
-            target="_blank"
-            href="/CVBryantEnglish.pdf"
-            className="flex items-center justify-center mt-6 border bg-black  mx-auto dark:text-white dark:bg-black dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white py-2 px-4 rounded-full"
-          >
-            {text ? "Download CV" : "Descargar Curriculum"}
-          </a>
+          {text ? (
+            <a
+              target="_blank"
+              href="/CVBryantEnglish.pdf"
+              className="flex items-center justify-center mt-6 border bg-black  mx-auto dark:text-white dark:bg-black dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white py-2 px-4 rounded-full"
+            >
+              Download CV
+            </a>
+          ) : (
+            <a
+              target="_blank"
+              href="/CVBryanRamirez.pdf"
+              className="flex items-center justify-center mt-6 border bg-black  mx-auto dark:text-white dark:bg-black dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white py-2 px-4 rounded-full"
+            >
+              Descargar Curriculum
+            </a>
+          )}
         </div>
       </div>
 
