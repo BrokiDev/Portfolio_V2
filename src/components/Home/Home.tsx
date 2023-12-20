@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../Header/Header";
 import Modal from "../Modal/Modal";
+import { HeaderProvider } from "../../context/HeaderContext";
 
 export default function Home({
   handleDarkMode,
@@ -53,14 +54,16 @@ export default function Home({
         toogleClose={handleCloseModal}
       />
 
-      <Header
-        handleChangeText={handleChangeText}
-        handleDarkMode={handleDarkMode}
+      <HeaderProvider
         handleOpenModal={handleOpenModal}
+        handleDarkMode={handleDarkMode}
+        handleChangeText={handleChangeText}
         boxSvgTextLogo={"Logo"}
         boxSvgTextProject={text ? "Projects" : "Proyectos"}
         boxSvgTextContact={text ? "Contact" : "Contacto"}
-      />
+      >
+        <Header />
+      </HeaderProvider>
 
       <div className="flex justify-around items-center flex-col sm:flex-row gap-3 m-4 sm:m-20">
         <div className="border border-black p-6 sm:p-24">

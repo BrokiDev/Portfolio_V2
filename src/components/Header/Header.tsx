@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import BoxSvgComponent from "../SvgComponent/BoxSvgComponent";
+import { useHeaderContext } from "../../context/HeaderContext";
 
-export default function Header({
-  handleChangeText,
-  handleDarkMode,
-  boxSvgTextLogo,
-  boxSvgTextContact,
-  boxSvgTextProject,
-  handleOpenModal,
-}: HeaderProps) {
+export default function Header() {
+  const {
+    boxSvgTextLogo,
+    boxSvgTextContact,
+    boxSvgTextProject,
+    handleChangeText,
+    handleDarkMode,
+    handleOpenModal,
+  } = useHeaderContext();
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <nav className="flex flex-col  items-center justify-center gap-4 py-5 sm:flex-row">
