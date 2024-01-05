@@ -1,6 +1,6 @@
-interface ModalProps {
+export interface ModalProps {
 isOpen: boolean;
-toogleClose:()=>void;
+toggleClose:()=>void;
 content:React.ReactNode
 
 }

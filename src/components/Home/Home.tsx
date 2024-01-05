@@ -36,7 +36,7 @@ export default function Home({
           )
         }
         isOpen={modalOpen === "contact"}
-        toogleClose={handleCloseModal}
+        toggleClose={handleCloseModal}
       />
 
       <Modal
@@ -51,7 +51,7 @@ export default function Home({
           )
         }
         isOpen={modalOpen === "project"}
-        toogleClose={handleCloseModal}
+        toggleClose={handleCloseModal}
       />
 
       <HeaderProvider
@@ -153,6 +153,7 @@ export default function Home({
             <img src="/icon_sql.svg" alt="" />
           </div>
         </div>
+        <Modal isOpen={modalOpen === 'test'} content={<div>Chamba TIME</div>} toggleClose={handleCloseModal}/>
       </div>
     </div>
   );

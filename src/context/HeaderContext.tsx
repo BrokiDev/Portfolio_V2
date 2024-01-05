@@ -1,4 +1,5 @@
 import React, { createContext, useContext } from "react";
+import { HeaderContextProps } from "../types/HeaderContextProps";
 
 const HeaderContext = createContext<HeaderContextProps | undefined>(undefined);
 

@@ -1,4 +1,4 @@
-interface HeaderContextProps {
+export interface HeaderContextProps {
     boxSvgTextLogo: string;
     boxSvgTextProject: string;
     boxSvgTextContact: string;
